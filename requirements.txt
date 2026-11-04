@@ -1,0 +1,3 @@
+# Runtime dependencies. Canonical metadata is maintained in pyproject.toml.
+pydantic>=2.0
+PyYAML>=6.0

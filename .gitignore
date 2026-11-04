@@ -1,0 +1,56 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+id_rsa
+id_ed25519
+secrets/
+credentials/
+**/credentials.json
+**/service-account*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv_cache/
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Generated files
+dist/
+build/
+coverage/
+htmlcov/
+
+# Node.js
+node_modules/
+
+# Temporary development scripts
+/add_parse_string.py
+/fix_parse_volume.py
+/fix_volume.py
+/fix_volume2.py
+
+

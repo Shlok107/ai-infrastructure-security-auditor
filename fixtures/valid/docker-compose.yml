@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      - ENVIRONMENT=production
+    volumes:
+      - ./data:/data
+    deploy:
+      replicas: 3
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set via environment}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  app-net:
+    driver: bridge
+
+volumes:
+  postgres_data:

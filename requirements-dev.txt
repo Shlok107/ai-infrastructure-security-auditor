@@ -1,0 +1,2 @@
+# Compatibility file for pip-based workflows. Prefer: pip install -e ".[dev]"
+-e .[dev]

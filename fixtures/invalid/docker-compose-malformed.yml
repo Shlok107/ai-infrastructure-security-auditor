@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    environment:
+      - ENVIRONMENT=production
+    volues:  # typo - should be volumes
+      - ./data:/data
+
+  db:
+
+networks:
+  app-net:
+    driv: bridge  # typo
